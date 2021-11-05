@@ -1,0 +1,15 @@
+.welcome-modal {
+    background: var(--surface);
+    border-radius: var(--box-radius);
+    padding: 35px;
+    max-width: 500px;
+    position: relative;
+    flex-direction: column;
+    overflow: hidden;
+    transition: 0.4s cubic-bezier(.4, .93, .42, 1.55);
+}
+
+.modal-transitioning {
+    transform: translateY(-20px) rotateX(2deg);
+    opacity: 0;
+}

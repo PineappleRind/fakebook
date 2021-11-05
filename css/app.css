@@ -1,0 +1,58 @@
+@import 'global.css';
+.loader {
+    position: relative;
+    height: 55px;
+    width: 55px;
+}
+
+.loader::after,
+.loader::before {
+    opacity: 1;
+    border-radius: 100%;
+    background: var(--accent);
+    content: '';
+    height: 55px;
+    animation: loader 2s infinite;
+    z-index: -1;
+    position: absolute;
+    width: 55px;
+    transform: scale(1) translateX(-100%)
+}
+
+.loader::before {
+    filter: invert(1);
+    z-index: -1;
+    animation: loader2 2s infinite;
+    transform: scale(1) translateX(100%)
+}
+
+@keyframes loader {
+    50% {
+        transform: scale(1) translateX(100%);
+        z-index: 2;
+    }
+}
+
+@keyframes loader2 {
+    0%,
+    100% {
+        transform: scale(1) translateX(100%);
+        z-index: 2;
+    }
+    50% {
+        transform: scale(1) translateX(-100%);
+        z-index: -1;
+    }
+}
+
+.modal {
+    background: var(--surface);
+    border-radius: var(--box-radius);
+    padding: 35px;
+    max-width: 500px;
+    z-index: 3;
+    position: fixed;
+    flex-direction: column;
+    overflow: hidden;
+    transition: 0.4s cubic-bezier(.4, .93, .42, 1.55);
+}
