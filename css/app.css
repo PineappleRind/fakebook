@@ -56,3 +56,133 @@
     overflow: hidden;
     transition: 0.4s cubic-bezier(.4, .93, .42, 1.55);
 }
+
+.app {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    height: calc(100vh - 65px);
+    top: 65px;
+    left: 0;
+    width: 100vw;
+}
+
+nav {
+    padding: 20px;
+    padding-right: 0px;
+    display: flex;
+    height: 100vh;
+    min-width: 200px;
+    margin: 20px 0 0 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav div {
+    white-space: pre;
+    font-weight: 700;
+    padding: 15px 50px 15px 30px;
+    margin: 5px 10px;
+    width: 100%;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 99px;
+}
+
+nav div:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+nav div:active {
+    background: rgba(0, 0, 0, 0.1)
+}
+
+.posts {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.post {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    display: flex;
+    max-width: 800px;
+    border-radius: var(--box-radius);
+    background: var(--surface);
+}
+
+.post img {
+    height: 80px;
+    margin-right: 10px;
+    border-radius: 50%;
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.4))
+}
+
+.post h3 {
+    font-size: 22px;
+}
+
+.post h3 span {
+    opacity: 0.7;
+    font-weight: 300;
+}
+
+.post p {
+    margin-top: 5px;
+    font-size: 21px;
+}
+
+.news {
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 0;
+    background: white;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.top-bar div {
+    display: flex;
+}
+
+.top-bar *:not(div) {
+    margin: 10px;
+}
+
+.top-bar img {
+    height: 40px;
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.4))
+}
+
+.top-bar input {
+    height: min-content;
+}
+
+.top-bar button {
+    padding: 10px 15px;
+    white-space: pre;
+    line-height: unset;
+}
+
+button[discouraged] {
+    background: 0;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+}
+
+button[discouraged]:hover {
+    border: 1px solid var(--accent-hover);
+    background: var(--accent-hover);
+    color: white;
+}
